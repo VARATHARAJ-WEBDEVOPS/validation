@@ -1,0 +1,17 @@
+<div class="subNav">
+    <h1 style=" margin-left: 3vh; color: #000;"> User List</h1>
+    <div style="display: flex;">
+        
+        <mat-icon
+            style="display: flex;justify-content: center;align-items: center; font-size: 3vh; padding: 0.7vh; border-radius: 50%; background-color: #eee; margin: 0; margin-right: 3vh;">filter_list</mat-icon>
+        <mat-icon routerLink="/user"
+            style="display: flex;justify-content: center;align-items: center; font-size: 3vh; padding: 0.7vh; border-radius: 50%; background-color: #eee; margin: 0; margin-right: 3vh;">add</mat-icon>
+    </div>
+</div>
+<div class="subNavSpace"></div>
+
+<div class="gridContainer">
+    <angular-slickgrid gridId="grid" [columnDefinitions]="columnDefinitions" [gridOptions]="gridOptions"
+        [dataset]="dataset">
+    </angular-slickgrid>
+</div>

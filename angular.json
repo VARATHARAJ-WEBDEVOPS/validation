@@ -30,9 +30,13 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/jquery-ui/dist/jquery-ui.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -93,12 +97,18 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "1e5dad3b-08aa-447e-9b51-c8a2f0614c72"
   }
 }

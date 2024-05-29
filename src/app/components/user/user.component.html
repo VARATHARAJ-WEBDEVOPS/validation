@@ -1,0 +1,48 @@
+<div class="subNav">
+  <h1 style=" margin-left: 3vh; color: #000;"> User Creation</h1>
+  <div style="display: flex;">
+      <mat-icon routerLink="/userlist" style="display: flex;justify-content: center;align-items: center; font-size: 3vh; padding: 0.7vh; border-radius: 50%; background-color: #eee; margin: 0; margin-right: 3vh;">list</mat-icon>
+
+      <mat-icon  (click)="validation(drawer)" style="display: flex;justify-content: center;align-items: center; font-size: 3vh; padding: 0.7vh; border-radius: 50%; background-color: #eee; margin: 0;  margin-right: 3vh;">save</mat-icon>
+  </div>
+</div>
+<div class="subNavSpace"></div>
+<mat-drawer-container class="taskFromContainer" autosize [formGroup]="userFrom">
+
+  <mat-drawer #drawer class="sideDrawer" mode="side">
+
+
+    <h1 style="color: red; font-size: 3.5vh;">Complete All Validations</h1>
+    <mat-divider></mat-divider>
+
+    <button mat-button color="warn" [matTooltipPosition]="'right'" matTooltip="click to fill Name field"
+      (click)="focusNameInput()" *ngIf="isUserNameError">Name is required</button>
+    <button mat-button color="warn" matTooltip="click to fill mail field" (click)="focusMailInput()"
+      *ngIf="isMailError">Mail is required</button>
+
+  </mat-drawer>
+
+  <div class="formContainer">
+
+    <div class="inputContainer">
+      <p> User ID</p>
+      <input type="text" readonly formControlName="userId">
+    </div>
+
+    <div class="inputContainer">
+      <p> Name<span style="color:red">*</span></p>
+      <input #nameInput type="text" formControlName="userName">
+    </div>
+
+    <div class="inputContainer">
+      <p>Mail<span style="color:red">*</span></p>
+      <input #mailInput type="text" formControlName="mail" placeholder="example@gmail.com">
+    </div>
+
+    <div class="inputContainer">
+      <p>Active<span style="color:red">*</span></p>
+      <mat-slide-toggle color="primary" formControlName="activeStatus"></mat-slide-toggle>
+    </div>
+
+  </div>
+</mat-drawer-container>

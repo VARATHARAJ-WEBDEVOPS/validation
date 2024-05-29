@@ -1,0 +1,85 @@
+.subNavSpace {
+    width: 100%;
+    height: 7.5vh;
+}
+
+.subNav {
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    top: 16.5vh;
+    left: 0;
+    height: 7.5vh;
+    width: 100%;
+    color: #717579;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10 !important;
+}
+
+.subNav button {
+    margin-left: 2vh;
+}
+
+.taskFromContainer {
+    z-index: 9 !important;
+    width: 100%;
+    height: 68svh;
+}
+
+.formContainer {
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-height: 88vh;
+    height: 40vh;
+    width: 100%;
+}
+
+.sideDrawer {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.sideDrawer button {
+    width: 100%;
+    height: 10vh;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3.3vh;
+}
+
+input {
+    padding: 2vh;
+    width: 45vh;
+    border-radius: 1vh;
+    background-color: none;
+    margin: 0;
+    border: 1.5px solid #eee;
+}
+
+.focused-element {
+    outline: none;
+    border: 2px solid red;
+  }  
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vh;
+    margin-inline: 5vh;
+}
+
+.saveButton {
+    position: fixed;
+    top: 14vh;
+    right: 6vh;
+}
